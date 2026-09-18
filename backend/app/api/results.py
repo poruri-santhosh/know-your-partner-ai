@@ -7,7 +7,7 @@ from app.database.database import get_submission
 from app.ml.predict import load_compatibility_model, load_kmeans_model
 from app.ml.feature_engineering import FEATURE_NAMES
 
-router = APIRouter(prefix="/api", tags=["results"])
+router = APIRouter(tags=["results"])
 
 
 @router.get("/results/{submission_id}")

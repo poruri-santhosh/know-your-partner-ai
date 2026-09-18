@@ -7,7 +7,7 @@ import joblib
 import numpy as np
 
 from app.data.questions import DIMENSIONS
-from app.ml.feature_engineering import DIMENSION_KEYS, extract_pair_features, features_to_vector
+from app.ml.feature_engineering import DIMENSION_KEYS, FEATURE_NAMES, extract_pair_features, features_to_vector
 from app.ml.compatibility import calculate_mathematical_compatibility
 
 MODELS_DIR = Path(__file__).resolve().parent.parent / "models"

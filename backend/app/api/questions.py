@@ -5,7 +5,7 @@ from typing import List, Dict, Any
 
 from app.data.questions import QUESTIONS, DIMENSIONS, QUESTION_LOOKUP
 
-router = APIRouter(prefix="/api", tags=["questions"])
+router = APIRouter(tags=["questions"])
 
 
 @router.get("/questions", response_model=List[Dict[str, Any]])

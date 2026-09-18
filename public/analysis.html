@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analyzing Compatibility Profile - Know Your Partner AI</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand">
+        <div class="brand-icon">❤️</div>
+        <span>KNOW YOUR PARTNER</span>
+      </a>
+      <span style="font-size: 0.85rem; color: #a5b4fc;">ML Processing Active</span>
+    </div>
+  </nav>
+
+  <!-- Processing State -->
+  <main class="analysis-container">
+    <div class="radar-spinner" id="spinner"></div>
+
+    <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 8px;">
+      ANALYZING YOUR PROFILE
+    </h2>
+
+    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">
+      Applying Behavioral Science & Machine Learning Regressors
+    </p>
+
+    <!-- Progress percentage bar -->
+    <div style="width: 100%; max-width: 440px; margin-bottom: 20px;">
+      <div class="progress-track">
+        <div id="analysis-progress" class="progress-bar" style="width: 15%;"></div>
+      </div>
+    </div>
+
+    <div id="step-label" class="analysis-step">
+      Normalizing behavioral signals...
+    </div>
+
+    <div id="error-box" style="display: none; margin-top: 24px; max-width: 500px; color: #f87171; background: rgba(248, 113, 113, 0.1); border: 1px solid rgba(248, 113, 113, 0.2); padding: 16px; border-radius: var(--radius-md);">
+      <p id="error-message"></p>
+      <div style="margin-top: 12px;">
+        <a href="quiz.html" class="btn btn-secondary btn-sm">Return to Quiz</a>
+        <button onclick="runAnalysis()" class="btn btn-primary btn-sm">Try Again</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/analysis.js"></script>
+</body>
+</html>

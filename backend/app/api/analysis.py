@@ -9,7 +9,7 @@ from app.ml.predict import predict_pair_compatibility
 from app.ml.compatibility import CANDIDATE_ARCHETYPES
 from app.ml.preprocessing import clean_profile_vector
 
-router = APIRouter(prefix="/api", tags=["analysis"])
+router = APIRouter(tags=["analysis"])
 
 
 @router.post("/analyze")

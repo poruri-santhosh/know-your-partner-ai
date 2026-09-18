@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Compatibility Profile - Know Your Partner AI</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    @media print {
+      .navbar, .btn, .simulator-panel, footer { display: none !important; }
+      body { background: white; color: black; }
+      .panel-card, .archetype-banner, .ai-insights-box { border: 1px solid #ccc; box-shadow: none; color: black; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand">
+        <div class="brand-icon">❤️</div>
+        <span>KNOW YOUR PARTNER</span>
+      </a>
+      <div style="display: flex; gap: 12px;">
+        <a href="quiz.html" class="btn btn-secondary btn-sm">Retake Quiz</a>
+        <button onclick="window.print()" class="btn btn-secondary btn-sm">Export Report</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container" style="padding-top: 32px; padding-bottom: 80px;">
+    <!-- Archetype & Overall Compatibility Banner -->
+    <section class="archetype-banner" id="archetype-banner">
+      <div class="archetype-info">
+        <div class="badge-pill" style="margin-bottom: 12px;">
+          <span>✨</span> <span id="archetype-badge">Behavioral Archetype</span>
+        </div>
+        <h2 id="archetype-name">The Grounded Anchor</h2>
+        <p class="archetype-tagline" id="archetype-tagline">
+          Values deep family roots, financial security, and organized stability.
+        </p>
+        <div style="margin-top: 16px; display: flex; gap: 10px; flex-wrap: wrap;" id="dominant-tags">
+          <!-- Dominant trait tags inserted here -->
+        </div>
+      </div>
+
+      <div class="compatibility-score-ring">
+        <span class="ring-number" id="overall-score">--</span>
+        <span class="ring-label">Compatibility</span>
+      </div>
+    </section>
+
+    <!-- Model Attribution Banner -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding: 10px 16px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--text-secondary);">
+      <div>
+        <span>Engine: </span>
+        <strong id="model-name" style="color: #a5b4fc;">Trained ML Regressor</strong>
+      </div>
+      <div id="compare-target-name" style="color: #f472b6; font-weight: 600;">
+        Target: Ideal Complementary Profile
+      </div>
+    </div>
+
+    <!-- Dashboard Main Grid -->
+    <div class="dashboard-grid">
+      <!-- Left Panel: 10 Dimension Comparison Matrix -->
+      <section class="panel-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+          <h3>
+            <span>📊</span>
+            <span>10-Dimension Behavioral Comparison</span>
+          </h3>
+          <div style="display: flex; gap: 16px; font-size: 0.8rem;">
+            <span style="display: flex; align-items: center; gap: 6px;">
+              <span style="width: 10px; height: 10px; border-radius: 50%; background: #6366f1; display: inline-block;"></span> You
+            </span>
+            <span style="display: flex; align-items: center; gap: 6px;">
+              <span style="width: 10px; height: 10px; border-radius: 50%; background: #ec4899; display: inline-block;"></span> Partner
+            </span>
+          </div>
+        </div>
+
+        <div id="dimensions-matrix">
+          <!-- 10 Dimension dual bars rendered by result.js -->
+        </div>
+      </section>
+
+      <!-- Right Panel: Core Psychological Breakdown -->
+      <aside class="panel-card" style="display: flex; flex-direction: column; gap: 24px;">
+        <div>
+          <h3 style="font-size: 1.15rem; margin-bottom: 14px;">
+            <span>🌟</span> Primary Relational Strengths
+          </h3>
+          <div id="strengths-list" style="display: flex; flex-direction: column; gap: 10px;">
+            <!-- Strengths rendered dynamically -->
+          </div>
+        </div>
+
+        <div>
+          <h3 style="font-size: 1.15rem; margin-bottom: 14px;">
+            <span>🎯</span> Ideal Partner Complementarity
+          </h3>
+          <p id="partner-needs-text" style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6;">
+            Loading partner profile analysis...
+          </p>
+        </div>
+
+        <div>
+          <h3 style="font-size: 1.15rem; margin-bottom: 14px;">
+            <span>🌱</span> Key Growth Opportunity
+          </h3>
+          <div style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: var(--radius-sm); padding: 14px; font-size: 0.9rem; color: #fde68a;" id="growth-advice-box">
+            Loading relationship advice...
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- AI Narrative Deep-Dive Section -->
+    <section class="ai-insights-box">
+      <div class="ai-badge">
+        <span>🤖</span>
+        <span id="ai-engine-label">Psychological Relationship Synthesis</span>
+      </div>
+      <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 12px;">
+        Comprehensive Compatibility Analysis
+      </h3>
+      <p id="ai-summary-text" style="font-size: 1.05rem; color: #e2e8f0; margin-bottom: 20px; line-height: 1.7;">
+        Loading narrative...
+      </p>
+
+      <div style="margin: 20px 0;">
+        <h4 style="color: #c084fc; margin-bottom: 10px;">What Makes Your Ideal Partner Match:</h4>
+        <p id="ai-partner-qualities" style="color: var(--text-secondary); font-size: 0.96rem; line-height: 1.6;"></p>
+      </div>
+
+      <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.8rem; color: var(--text-muted);" id="ai-disclaimer">
+        Disclaimer: This profile represents a behavioral science estimation based on questionnaire responses, not a deterministic marital prediction.
+      </div>
+    </section>
+
+    <!-- Candidate Matching Explorer -->
+    <section style="margin-bottom: 48px;">
+      <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 8px;">
+        <span>👥</span> Candidate Archetype Matches
+      </h3>
+      <p style="color: var(--text-secondary); margin-bottom: 20px; font-size: 0.95rem;">
+        Compare your behavioral profile against distinct hypothetical candidate profiles:
+      </p>
+
+      <div class="candidate-grid" id="candidates-grid">
+        <!-- Candidate cards dynamically rendered -->
+      </div>
+    </section>
+
+    <!-- Interactive Custom Partner Simulator -->
+    <section class="panel-card simulator-panel" style="border-color: rgba(236, 72, 153, 0.3);">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 12px;">
+        <div>
+          <h3 style="margin-bottom: 4px;">
+            <span>🎛️</span> Custom Partner Compatibility Simulator
+          </h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">
+            Adjust dimension sliders for a real-world partner to test predicted compatibility in real time:
+          </p>
+        </div>
+        <button id="btn-calc-custom" class="btn btn-primary btn-sm">
+          Run Real-Time ML Prediction
+        </button>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 20px;" id="simulator-sliders">
+        <!-- Sliders rendered dynamically -->
+      </div>
+
+      <div id="custom-result-alert" style="display: none; margin-top: 20px; padding: 16px; background: rgba(99, 102, 241, 0.15); border: 1px solid #818cf8; border-radius: var(--radius-md); text-align: center;">
+        <span style="font-size: 1.2rem; font-weight: 700; color: #ffffff;" id="custom-score-text">
+          Predicted Compatibility: --%
+        </span>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>Know Your Partner AI • Behavioral Science & Machine Learning Research</p>
+    </div>
+  </footer>
+
+  <script src="js/result.js"></script>
+</body>
+</html>
